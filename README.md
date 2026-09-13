@@ -1,3 +1,12 @@
+## Acknowledgements
+
+This project uses the excellent PyToyoda library to access Toyota and Lexus connected vehicle services.
+
+PyToyoda:
+https://github.com/zauberzeug/pytoyoda
+`
+
+
 # Lexus EV Status Overlay
 
 A lightweight, always-on-top desktop overlay for a Raspberry Pi or Linux system. It displays the latest available status for a Lexus electric vehicle using the Toyota/Lexus connected-services API through `pytoyoda`.
@@ -252,9 +261,12 @@ Detailed exception information is also printed to the process output.
 
 Do not share unredacted logs. If credentials or live authentication tokens are exposed, change the account password and revoke sessions where possible.
 
-### Unofficial API dependency
+## Key Dependencies
 
-This script relies on `pytoyoda` and Toyota/Lexus connected-service interfaces that may change without notice. A future library or API change may require updates to the compatibility shims, authentication flow, endpoint calls or response-field handling.
+- PyToyoda - Python client library for Toyota and Lexus connected services
+- PyQt5 - Desktop overlay user interface
+- httpx - HTTP client
+- hishel - HTTP caching support
 
 ### Vehicle wake-ups
 
@@ -279,5 +291,16 @@ The final line is the locally converted time of the latest vehicle-supplied stat
 The current script is:
 
 ```text
-lexus_overlay_updated.py
+lexus_overlay.py
 ```
+
+## Disclaimer
+
+This project is an unofficial community project.
+
+It is not affiliated with, endorsed by or supported by Toyota Motor Corporation, Toyota Connected Europe or Lexus.
+
+Vehicle data access is provided through the PyToyoda project and Toyota/Lexus connected services APIs.
+
+
+
